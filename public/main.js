@@ -2,6 +2,7 @@
 let p2Status={};
 
 function UpdateTable(){
+    $('#tbl-body').empty();
     Object.entries(p2Status).forEach(([key, value], index) => {
         console.log(`${index}: ${key} = ${value}`);
         if(value){
@@ -14,18 +15,34 @@ function UpdateTable(){
 }
 
 $(document).ready(function () {
+    let d = new Date();
+    let n = d.getTime();
+    $("#time").val(n);
+    $("#batch").val(n);
+    $("#rID").val(Math.floor((Math.random() * 100) + 1));
     UpdateTable();
     // $('#tbl-body').after('<tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr>');
 });
 
 setInterval(function() {
-    $.ajax('http://api.wunderground.com/api/c6dc8e785d943109/conditions/q/AZ/Chandler.json', {
-        dataType: 'jsonp',
-        success: function(json) {
-            // $('div#city strong').text(json.current_observation.display_location.full)
-            // $('div#icon').html('<img src=' + json.current_observation.icon_url + '>')
-            // $('div#weather').text(json.current_observation.temperature_string + " " + json.current_observation.weather);
-            // $('div#time').text(json.current_observation.observation_time_rfc822);
+    let time = $("#time").val();
+    let batch = $("#batch").val();
+    let rID = $("#rID").val();
+
+    $.ajax('/api/getIoc', {
+        method: "GET",
+        data: {
+            time: time,
+            batchTime: batch,
+            runID: rID
+        },
+        success: function(data) {
+            console.log(data);
+            p2Status = data;
+            UpdateTable();
+        },
+        error: function(data) {
+            console.log('Error: ' + data);
         }
     });
 }, 1000 ); // every second

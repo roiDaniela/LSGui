@@ -1,5 +1,7 @@
 .head-container {
     background-size: cover;
+    background-color: lightblue;
+    width: 50%;
     /*background: rgb(226,226,226); !* Old browsers *!*/
     /*background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); !* FF3.6+ *!*/
     /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(219,219,219,1)), color-stop(51%,rgba(209,209,209,1)), color-stop(100%,rgba(254,254,254,1))); !* Chrome,Safari4+ *!*/
@@ -11,20 +13,36 @@
     padding: 60px;
 }
 
+.header img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #555;
+}
+
+.header h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url("light_stars.jpg");
 }
 
 .hero-image {
     /*background-image: url("");*/
     /*background-color: #cccccc;*/
-    background-color: lightblue;
-    height: 500px;
+    /*background-color: lightblue;*/
+    /*height: 500px;*/
+    width: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin: 0 auto;
 }
 
 .title{
@@ -41,12 +59,12 @@ body {
 
 .center_div{
     margin: 0 auto;
-    width:20% /* value of your choice which suits your alignment */
+    /*width:50% !* value of your choice which suits your alignment *!*/
 }
 
 .container {
     background-size: cover;
-    width: 50%;
+    /*width: 50%;*/
 
      background: rgb(226,226,226); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6+ */
