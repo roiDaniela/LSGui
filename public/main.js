@@ -38,7 +38,11 @@ setInterval(function() {
         },
         success: function(data) {
             console.log(data);
-            p2Status = data;
+            try {
+                p2Status = JSON.parse(data);
+            } catch (e) {
+                p2Status = data;
+            }
             UpdateTable();
         },
         error: function(data) {
