@@ -8,6 +8,7 @@ function UpdateTable(){
         if(value){
             $('#tbl-body').append('<tr><th scope="row">'+index+'</th><td>'+key+'</td><td><div class="led-box"><div class="led-red"></div></div></td></tr>');
             $("#logger").append($( "<p>"+ "<strong>Phenomena: </strong>" +  key +  " <strong>ID: " + "</strong>" + $("#rID").val() + " <strong>Time: " + "</strong>" + $("#time").val() + " <strong>Batch time: </strong>" + $("#batch").val() + "</p>" ) )
+            // $("#logger").append($( "<br><strong>Phenomena: </strong>" +  key +  " <strong>ID: " + "</strong>" + $("#rID").val() + " <strong>Time: " + "</strong>" + $("#time").val() + " <strong>Batch time: </strong>" + $("#batch").val()) )
         }
         else{
             $('#tbl-body').append('<tr><th scope="row">'+index+'</th><td>'+key+'</td><td><div class="led-box"><div class="led-green"></div></div></td></tr>');
