@@ -8,4 +8,6 @@ app.use(bodyParser.json());
 
 app.get('/api/getIoc', (req, res) => res.send({pa: random_boolean = Math.random() >= 0.5, pb: random_boolean = Math.random() >= 0.5, pc: random_boolean = Math.random() >= 0.5}));
 
+app.get('/api/startnewofflinesession', (req, res) => res.send("startnewofflinesession success"));
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

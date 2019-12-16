@@ -13,11 +13,6 @@
     padding: 20px;
 }
 
-.phenomena{
-    /*padding-top: 40px;*/
-    /*margin-top: 40px;*/
-}
-
 .header img {
     float: left;
     width: 100px;
@@ -46,21 +41,33 @@ body {
     background-image: url("light_stars.jpg");
 }
 
-.hero-image {
-    /*background-image: url("");*/
-    /*background-color: #cccccc;*/
-    /*background-color: lightblue;*/
-    /*height: 500px;*/
+.mission {
     width: 50%;
+    padding-right: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin: 0 auto;
+    margin-left: auto;
+}
+
+.phenomena {
+    /*background-image: url("");*/
+    /*background-color: #cccccc;*/
+    /*background-color: lightblue;*/
+    /*height: 500px;*/
+    width: 30%;
+    margin-right: auto;
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*position: relative;*/
+    /*margin: 0 auto;*/
 }
 
 .title{
     /*padding-bottom: 100px;*/
+    margin: auto;
 }
 
 .hero-text {
@@ -73,8 +80,9 @@ body {
 }
 
 .center_div{
-    margin: 0 auto;
     /*width:50% !* value of your choice which suits your alignment *!*/
+    float: none;
+    margin: 0 auto
 }
 
 .container {

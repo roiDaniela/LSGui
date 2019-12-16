@@ -36,6 +36,37 @@ $(document).ready(function () {
     // $('#tbl-body').after('<tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr>');
 });
 
+$("#startNewMission").click(function () {
+    let  srcRepo = $("#srcRepo").val();
+    let playingMode = $("#srcRepo").val();
+    let startTime = $("#startTime").val();
+    let endTime = $("#endTime").val();
+    let selectedParticipants = $("#selectedParticipants").val();
+    let runData = $("#runData").val();
+    let algVersion = $("#algVersion").val();
+    let operatorID = $("#operatorID").val();
+
+    $.ajax('/api/startnewofflinesession', {
+        method: "GET",
+        data: {
+            srcRepo: srcRepo,
+            playingMode: playingMode,
+            startTime: startTime,
+            endTime: endTime,
+            selectedParticipants: selectedParticipants,
+            runData: runData,
+            algVersion: algVersion,
+            operatorID: operatorID
+        },
+        success: function(data) {
+            console.log(data);
+        },
+        error: function(data) {
+            console.log('Error: ' + data);
+        }
+    });
+});
+
 setInterval(function() {
     let time = $("#time").val();
     let batch = $("#batch").val();
