@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./Chart.min.css">
     <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <title></title>
@@ -67,7 +68,7 @@
 <!--            <div style="color: white">The cat is blue</div>-->
         </div>
 
-        <div class="phenomena col-4">
+        <div class="phenomena">
             <div class="head-container center_div">
                     <div>
                         <label for="time">Time</label>
@@ -84,38 +85,54 @@
                         <input type="number" class="form-control input-sm" id="rID">
                     </div>
             </div>
+        </div>
 
-
-            <div class="container">
+        <div class="center_div" style="padding-left: 20px; padding-right: 20px">
+`            <div class="container">
                 <table class="table">
                     <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Phenomena</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">T-9</th>
+                        <th scope="col">T-8</th>
+                        <th scope="col">T-7</th>
+                        <th scope="col">T-6</th>
+                        <th scope="col">T-5</th>
+                        <th scope="col">T-4</th>
+                        <th scope="col">T-3</th>
+                        <th scope="col">T-2</th>
+                        <th scope="col">T-1</th>
+                        <th scope="col">T</th>
+<!--                        <th scope="col">History</th>-->
                     </tr>
                     </thead>
                     <tbody id="tbl-body">
                     </tbody>
                 </table>
-            </div>
+            </div>`
         </div>
     </div>
     </div>
 <!--    <div id="logger" class="col-6 overflow-auto" style="background-color:wheat; width: 100%!important;" >-->
     <div id="logger" class="col-4 scrollbar scrollbar-primary">
     </div>
-
-
-
     </div>
 
     <script  src="./bootstrap.min.js"></script>
-    <script  src="jquery-3.4.1.min.js"></script>
+    <script  src="./jquery-3.4.1.min.js"></script>
+    <script  src="./moment-with-locales.js"></script>
+    <script  src="./Chart.bundle.min.js"></script>
+    <script  src="./Chart.min.js"></script>
+    <script  src="./lodash.min.js"></script>
     <script  src="main.js"></script>
 
-    <!--<script  src="./bootstrap.min.js"></script>-->
-    <!--<script  src="jquery-3.4.1.min.js"></script>-->
-    <!--<script  src="main.js"></script>-->
+<!--    <script  src="./bootstrap.min.js"></script>-->
+<!--    <script  src="./jquery-3.4.1.min.js"></script>-->
+<!--    <script  src="./moment-with-locales.js"></script>-->
+<!--    <script  src="./Chart.bundle.min.js"></script>-->
+<!--    <script  src="./Chart.min.js"></script>-->
+<!--    <script  src="utils.js"></script>-->
+<!--    <script  src="main.js"></script>-->
 </body>
 </html>
