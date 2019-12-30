@@ -215,17 +215,41 @@ $(document).ready(function () {
     $("#time").val(n);
     $("#batch").val(n);
     $("#rID").val(Math.floor((Math.random() * 100) + 1));
+    $("#runID").val('_' + Math.random().toString(36).substr(2, 9));
     UpdateTable();
     // $('#tbl-body').after('<tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr>');
 });
 
-$("#startNewMission").click(function () {
+$("#startNewOnlineMission").click(function () {
+    let runID = $("#runID").val();
+    let algVersion = $("#algVersion").val();
+
+    $.ajax('/api/startNewRealTimeSession', {
+        method: "GET",
+        data: {
+            runId: runID,
+            algVersion: algVersion
+        },
+        success: function(data) {
+            console.log(data);
+            $("#runID").val('_' + Math.random().toString(36).substr(2, 9));
+        },
+        error: function(data) {
+            console.log('Error: ' + data);
+            $("#runID").val('_' + Math.random().toString(36).substr(2, 9));
+        }
+    });
+});
+
+$("#startNewOfflineMission").click(function () {
     let  srcRepo = $("#srcRepo").val();
     let playingMode = $("#srcRepo").val();
     let startTime = $("#startTime").val();
     let endTime = $("#endTime").val();
     let selectedParticipants = $("#selectedParticipants").val();
-    let runData = $("#runData").val();
+    // let runData = $("#runData").val();
+    let runData = "offline";
+    let runID = $("#runID").val();
     let algVersion = $("#algVersion").val();
     let operatorID = $("#operatorID").val();
 
@@ -238,14 +262,17 @@ $("#startNewMission").click(function () {
             endTime: endTime,
             selectedParticipants: selectedParticipants,
             runData: runData,
+            runId: runID,
             algVersion: algVersion,
             operatorID: operatorID
         },
         success: function(data) {
             console.log(data);
+            $("#runID").val('_' + Math.random().toString(36).substr(2, 9));
         },
         error: function(data) {
             console.log('Error: ' + data);
+            $("#runID").val('_' + Math.random().toString(36).substr(2, 9));
         }
     });
 });
@@ -276,5 +303,10 @@ setInterval(function() {
         error: function(data) {
             console.log('Error: ' + data);
         }
+    }).then(()=>{
+        let d = new Date();
+        let n = d.getTime();
+        $("#time").val(n);
+        $("#batch").val(n);
     });
 }, 1000 ); // every second

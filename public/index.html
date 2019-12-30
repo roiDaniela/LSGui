@@ -46,8 +46,8 @@
                         <input type="text" class="form-control input-sm" id="selectedParticipants" value="All">
                     </div>
                     <div >
-                        <label for="runData">Run Data</label>
-                        <input type="text" class="form-control input-sm" id="runData" value="offline">
+                        <label for="runID">Run ID</label>
+                        <input type="text" class="form-control input-sm" id="runID">
                     </div>
                 </div>
                 <div class="form-group form-inline">
@@ -60,12 +60,14 @@
                         <input type="text" class="form-control input-sm" id="operatorID">
                     </div>
                 </div>
-<!--                <div class="col-4" style="padding-top: 10px">-->
                 <div style="padding-top: 10px">
-                <input type="button" class="form-control btn btn-info" value="Start" id="startNewMission">
+                    <input type="button" class="form-control input-sm btn btn-info" value="Start Online" id="startNewOnlineMission">
                 </div>
-            </div>
+                <div style="padding-top: 10px">
+                    <input type="button" class="form-control input-sm btn btn-danger" value="Start Offline" id="startNewOfflineMission">
+                </div>
 <!--            <div style="color: white">The cat is blue</div>-->
+            </div>
         </div>
 
         <div class="phenomena">
@@ -75,7 +77,7 @@
                         <input type="number" class="form-control input-sm" id="time">
                     </div>
 
-                    <div>
+                    <div style="display: none">
                         <label for="batch">Batch</label>
                         <input type="number" class="form-control input-sm" id="batch">
                     </div>
