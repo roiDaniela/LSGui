@@ -33,17 +33,17 @@
                 <div class="form-group form-inline">
                     <div >
                         <label for="startTime" class="form-text">Start Time</label>
-                        <input type="date" class="form-control" id="startTime" style="height: 38px; width: 221px">
+                        <input type="datetime-local" class="form-control input-sm" id="startTime" style="height: 38px; width: 221px">
                     </div>
                     <div >
                         <label for="endTime" class="form-text">End Time</label>
-                        <input type="date" class="form-control" id="endTime" style="height: 38px; width: 221px">
+                        <input type="datetime-local" class="form-control input-sm" id="endTime" style="height: 38px; width: 221px">
                     </div>
                 </div>
                 <div class="form-group form-inline">
                     <div >
                         <label for="selectedParticipants">Selected Participants</label>
-                        <input type="text" class="form-control input-sm" id="selectedParticipants" value="All">
+                        <input type="text" class="form-control input-sm" step="1" id="selectedParticipants" value="All">
                     </div>
                     <div >
                         <label for="runID">Run ID</label>
@@ -74,7 +74,7 @@
             <div class="head-container center_div">
                     <div>
                         <label for="time">Time</label>
-                        <input type="number" class="form-control input-sm" id="time">
+                        <input type="number" class="form-control input-sm" id="time" disabled>
                     </div>
 
                     <div style="display: none">
