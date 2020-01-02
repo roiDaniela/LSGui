@@ -14,11 +14,11 @@ function updateAccordingToVal(key, value, index){
                 jqr_str+= '<td><div class="led-box"><div class="led-green"></div></div></td>';
             } else{
                 jqr_str+= '<td><div class="led-box"><div class="led-red"></div></div></td>';
+                $("#logger").append($( "<div></div><small>"+ "<strong>Phenomena: </strong>" +  key +  " <strong>ID: " + "</strong>" + $("#rID").val() + " <strong>Time: " + "</strong>" + date.toLocaleString() /*+ " <strong>B_time: </strong>" + b_date.toLocaleString() */+ "</small></div>" ) )
             }
         });
         jqr_str+='</tr>';
         $('#tbl-body').append($(jqr_str));
-        $("#logger").append($( "<div></div><small>"+ "<strong>Ph: </strong>" +  key +  " <strong>ID: " + "</strong>" + $("#rID").val() + " <strong>Time: " + "</strong>" + date.toLocaleString() + " <strong>B_time: </strong>" + b_date.toLocaleString() + "</small></div>" ) )
 }
 
 function UpdateTable(){
